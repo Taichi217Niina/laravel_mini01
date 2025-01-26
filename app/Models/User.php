@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'age',
         'password',
     ];
 
@@ -41,4 +42,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // タスクとのリレーション
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }
