@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TopPage</title>
+    <title>User Edit</title>
 </head>
 
 <body>
-    <a href="{{ route('login') }}">Login</a>
-    <a href="{{ route('register') }}">Create</a>
+    <h1>User Edit</h1>
+    <div>{{ $user->name }}</div>
+    <div>{{ $user->email }}</div>
+    <div>{{ $user->age }}</div>
 </body>
 
 </html>
